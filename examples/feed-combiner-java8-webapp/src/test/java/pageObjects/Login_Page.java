@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class Login_Page {
 	private static WebElement element = null;
-	public static String appUrl = "D:/Users/703193457/DevopsSeleniumDemo/src/test/resources/Loginform.html";
-	public static String driverUrl = "D:/Users/703193457/DevopsSeleniumDemo/src/test/resources/IEDriverServer.exe";
+	public static String appUrl = "C:\JenkinSlave\workspace\Banking Scorecard Build\examples\feed-combiner-java8-webapp\src\test\resources\chromedriver.exe";
+	public static String driverUrl = "C:\JenkinSlave\workspace\Banking Scorecard Build\examples\feed-combiner-java8-webapp\src\test\resources\IEDriverServer.exe";
 
 	public static WebElement txtbx_UserName(WebDriver driver) {
 
