@@ -36,12 +36,12 @@ public class Login_Test {
 	public void IsPasswordFIeldIsPresent() {
 		assertTrue(Login_Page.txtbx_Password(driver).isDisplayed());
 	}
-
+/*
 	@Test
 	public void IsLoginButtonIsPresent() {
 		assertTrue(Login_Page.btn_LogIn(driver).isDisplayed());
 	}
-
+*/
 	@Test
 	public void LoginwithValidCredential() throws InterruptedException {
 		Login_Page.txtbx_UserName(driver).sendKeys("400218542");
@@ -94,9 +94,10 @@ public class Login_Test {
 		driver.get(Login_Page.appUrl);
 	}
 */	
+/*
 	@AfterMethod
 	public void afterMethod() {
 		driver.quit();
 	}
-
+*/
 }
