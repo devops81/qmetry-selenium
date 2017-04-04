@@ -83,7 +83,7 @@ public class Login_Test {
 		Login_Page.btn_LogIn(driver).click();
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
-
+/*
 	@BeforeMethod
 	public void beforeMethod() {
 		File file = new File(Login_Page.driverUrl);
@@ -93,7 +93,7 @@ public class Login_Test {
 		driver.manage().window().maximize();
 		driver.get(Login_Page.appUrl);
 	}
-
+*/	
 	@AfterMethod
 	public void afterMethod() {
 		driver.quit();
