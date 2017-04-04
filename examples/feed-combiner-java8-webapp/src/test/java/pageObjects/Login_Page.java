@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 
 public class Login_Page {
 	private static WebElement element = null;
-	public static String appUrl = "C:\chromedriver.exe";
-	public static String driverUrl = "C:\IEDriverServer.exe";
+	public static String appUrl = "C:/chromedriver.exe";
+	public static String driverUrl = "C:/IEDriverServer.exe";
 
 	public static WebElement txtbx_UserName(WebDriver driver) {
 
