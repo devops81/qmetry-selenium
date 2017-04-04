@@ -86,8 +86,8 @@ public class Login_Test {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		File file = new File(Login_Page.appUrl);
-		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+		File file = new File(Login_Page.app);
+		System.setProperty("webdriver.ie.driverUrl", file.getAbsolutePath());
 		driver = new InternetExplorerDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
