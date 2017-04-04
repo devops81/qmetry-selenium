@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example test run">
+  <test name="Login Tests By Selenium">
+    <classes>
+        <class name="pageTests.Login_Test"/>
+    </classes>
+  </test>
+</suite>
