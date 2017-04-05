@@ -27,22 +27,22 @@ public class Login_Test {
 
 	}
 
-	@Test
+	//@Test
 	public void IsUserNameFIeldIsPresent() {
 		assertTrue(Login_Page.txtbx_UserName(driver).isDisplayed());
 	}
 
-	@Test
+	//@Test
 	public void IsPasswordFIeldIsPresent() {
 		assertTrue(Login_Page.txtbx_Password(driver).isDisplayed());
 	}
 
-	@Test
+	//@Test
 	public void IsLoginButtonIsPresent() {
 		assertTrue(Login_Page.btn_LogIn(driver).isDisplayed());
 	}
 
-	@Test
+	//@Test
 	public void LoginwithValidCredential() throws InterruptedException {
 		Login_Page.txtbx_UserName(driver).sendKeys("400218542");
 		Login_Page.txtbx_Password(driver).sendKeys("sa");
@@ -51,7 +51,7 @@ public class Login_Test {
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	@Test
+	//@Test
 	public void LoginwithInValidCredential() throws InterruptedException {
 		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
 		Login_Page.txtbx_Password(driver).sendKeys("sa");
@@ -60,7 +60,7 @@ public class Login_Test {
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	@Test
+	//@Test
 	public void LoginwithValidUserInvalidPasword() {
 		Login_Page.txtbx_UserName(driver).sendKeys("400218542");
 		Login_Page.txtbx_Password(driver).sendKeys("ha");
@@ -68,12 +68,22 @@ public class Login_Test {
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	@Test
-	public void LoginwithEmptyUserNameAndPassword() {
+	//@Test
+	/*public void LoginwithEmptyUserNameAndPassword() {
 		Login_Page.txtbx_UserName(driver).sendKeys("");
 		Login_Page.txtbx_Password(driver).sendKeys("");
 		Login_Page.btn_LogIn(driver).click();
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
+	}*/
+	
+	@Test
+	public void LoginwithEmptyUserNameAndPassword() {
+		File file = new File(Login_Page.driverUrl);
+		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+		driver = new InternetExplorerDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(Login_Page.appUrl);
 	}
 
 	// @Test(dataProvider = "Authentication")
@@ -84,7 +94,7 @@ public class Login_Test {
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	@BeforeMethod
+	//@BeforeMethod
 	public void beforeMethod() {
 		File file = new File(Login_Page.driverUrl);
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
