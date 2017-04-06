@@ -123,18 +123,8 @@ F
             <version>${commons-lang3.version}</version>
             <scope>test</scope>
         </dependency>
-		
-		<dependency>
-	    <groupId>org.testng</groupId>
-	    <artifactId>testng</artifactId>
-	    <version>6.11</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.seleniumhq.selenium</groupId>
-	    <artifactId>selenium-java</artifactId>
-	    <version>3.0.1</version>
-	</dependency>
-    </dependencies>
+
+	</dependencies>
 
     <build>
         <plugins>
