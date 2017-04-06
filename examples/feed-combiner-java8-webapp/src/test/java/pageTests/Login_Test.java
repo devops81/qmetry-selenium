@@ -18,7 +18,7 @@ public class Login_Test {
 	private static WebDriver driver = null;
 	public String[] invalidChars = { "#", "!", "$", "@", "%", "^", "&" };
 
-	@DataProvider(name = "Authentication")
+	//@DataProvider(name = "Authentication")
 
 	public static Object[][] credentials() {
 
@@ -78,12 +78,7 @@ public class Login_Test {
 	
 	@Test
 	public void LoginwithEmptyUserNameAndPassword() {
-		File file = new File(Login_Page.driverUrl);
-		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		driver = new InternetExplorerDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		driver.get(Login_Page.appUrl);
+		System.out.println("Selenium Test...");
 	}
 
 	// @Test(dataProvider = "Authentication")
@@ -105,7 +100,7 @@ public class Login_Test {
 	}
 	
 
-	@AfterMethod
+	//@AfterMethod
 	public void afterMethod() {
 		driver.quit();
 	}
