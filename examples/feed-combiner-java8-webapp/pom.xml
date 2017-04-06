@@ -149,7 +149,7 @@
   <groupId>com.atlassian.maven.plugins</groupId>
   <artifactId>maven-clover2-plugin</artifactId>
   <configuration>
-     <licenseLocation>c:/clover.license</licenseLocation>
+     <licenseLocation>/home/ec2-user/clic/clover.license</licenseLocation>
   </configuration>
   <executions>
     <execution>
