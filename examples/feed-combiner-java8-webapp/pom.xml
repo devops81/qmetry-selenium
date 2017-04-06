@@ -13,7 +13,7 @@
     http://glassfish.java.net/public/CDDL+GPL_1_1.html
     or packager/legal/LICENSE.txt.  See the License for the specific
     language governing permissions and limitations under the License.
-F
+
     When distributing the software, include this License Header Notice in each
     file and include the License file at packager/legal/LICENSE.txt.
 
@@ -123,26 +123,15 @@ F
             <version>${commons-lang3.version}</version>
             <scope>test</scope>
         </dependency>
-
-	</dependencies>
+    </dependencies>
 
     <build>
         <plugins>
 		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>2.19.1</version>
-			<configuration>
-				<suiteXmlFiles>
-					<suiteXmlFile>testng.xml</suiteXmlFile>
-				</suiteXmlFiles>
-			</configuration>
-		</plugin>
-		<plugin>
   <groupId>com.atlassian.maven.plugins</groupId>
   <artifactId>maven-clover2-plugin</artifactId>
   <configuration>
-     <licenseLocation>C:/clover.license</licenseLocation>
+     <licenseLocation>c:/clover.license</licenseLocation>
   </configuration>
   <executions>
     <execution>
