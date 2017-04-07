@@ -1,13 +1,19 @@
 var attempt = 3; //Variable to count number of attempts
+var loggedUser = 'Admin';
+
+function getUserName(){
+	alert(document.getElementById("username").value);
+}
 
 //Below function Executes on click of login button
 function validate(){
+	
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
 	
-	if ( username == "400219041" && password == "sa"){
-		alert ("Login successfully");
-		window.location = "success.html"; //redirecting to other page
+	
+	if ( username == "admin" && password == "admin"){
+		window.location = "welcome.html"; //redirecting to other page
 		return false;
 	}
 	else if(username == "" && password == "sa")
@@ -22,27 +28,6 @@ function validate(){
 	else if(username == "" && password == "")
 	{
 		document.getElementById('error').innerHTML="User Name & Password can not be blanked";
-	}
-	
-	/*else if (!username.match(/^[a-zA-Z]+$/)) 
-    {
-        alert('Only alphabets are allowed');
-        return false;
-    }*/
-	
-	else{
-		
-		
-		attempt --;//Decrementing by one
-		alert("Invalid User or Password and You have left only "+attempt+" attempt");
-		
-		//Disabling fields after 3 attempts
-		if( attempt == 0){
-			document.getElementById("username").disabled = true;
-			document.getElementById("password").disabled = true;
-			document.getElementById("submit").disabled = true;
-			return false;
-		}
 	}
 }
 function blockSpecialChar(e){

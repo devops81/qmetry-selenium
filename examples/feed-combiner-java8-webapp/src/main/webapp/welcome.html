@@ -36,7 +36,12 @@
 
 	   <div class="navbar-collapse collapse move-me">
                 <ul class="nav navbar-nav navbar-right set-links">
-                    <li><a href="#" class="active-menu-item">Welcome to the Genpact Continous Integration tool.Please login with valid credentials to proceed.</a></li>					
+                    <li><a href="index.html" class="active-menu-item">HOME</a></li>
+                    <li><a href="cd.html">Continous Integration</a></li>
+                    <li><a href="cm.html">Configuration Management </a></li>
+                     <li><a href="vc.html">Version Control</a></li>
+					 <li><a href="vc.html">QA Automation</a></li>
+					
                 </ul>
             </div>
 
@@ -52,54 +57,48 @@
 					<form id="form_id" method="post" name="myform">
 						<table>
 							<tr>
-								<td><label>User Name :</label></td><td><input type="text" style="color:black" name="username" id="username"/></td>
+								<td><label onclick="getUserName()">Welcome User</label></td>
 							</tr>
 							<tr>
-								<td><label>Password  :</label></td><td><input type="password" style="color:black" name="password" id="password"/></td>
-							</tr>
-							<tr>
-								<td></td><td align='center'><input type="button" style="color:black" value="Login" id="submit" onclick="validate()"/></td>
+								<td><label align="right" type="text" style="color:white" id="usernaam"/></td>
 							</tr>
 						</table>	 
 					</form>
 				</td>
 			</tr>
 		 </table>
-		  
-		 
-
     </section>
     <!--HOME SECTION END-->
     <!--SEARCH SECTION END-->
-	<p></p><p></p><p></p><p></p><p></p>
-    <section id="services-sec2">
-	
+    <section id="services-sec">
         <div class="container">
            
-            <div class="row" >
-  <h3><img src="assets/img/devopsImage.png"/></h3>
+            <div class="row text-center" >
+<div class="col-md-4"><img src="assets/img/atlassian-bamboo-logo.png" width=126 height="126"/>
+  <h3>BAMBOO/JENKINS for CI/CD</h3>
+</div>
+                <div class="col-md-4"><img src="assets/img/download.png" width=126 height="126"/>
+                  <h4>
+                    bitbucket/github</h4>
+                </div>
+                <div class="col-md-4">
+                  <IMG SRC=assets/img/CONFLUENCE.png height="126" width="126" />
+                  <h4>
+                    CONFLUENCE for Knowledge Management</h4>
+              </div>
             </div>
         </div>
-    </section>
-    <div class="copy-txt">
-         <div class="container">
-        <div class="row">
-<div class="col-md-12 set-foot" >
-    &copy 2017 | All rights reserved | Design by : genpact.com
+		<div class="col-md-12 set-foot" >
+    &copy 2017 your domain | All rights reserved | Design by : genpact.com
 </div>
-            </div>
-                   </div>
-    </div>
-     <!-- COPY TEXT SECTION END-->
-    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
-    <!-- CORE JQUERY  -->
+    </section>
     <script src="assets/js/jquery-1.11.1.js"></script>
-	<script src="js/login.js"></script>
 
 <script>
 function myFunction() {
 var currDate = Date().toString().substring(0,15);
 document.getElementById('demo').innerHTML= currDate;
+document.getElementById('usernaam').innerHTML= loggedUser;
 }
 </script>
 
@@ -107,5 +106,6 @@ document.getElementById('demo').innerHTML= currDate;
     <script src="assets/js/bootstrap.js"></script>
     <!-- CUSTOM SCRIPTS  -->
     <script src="assets/js/custom.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>
