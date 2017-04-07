@@ -228,6 +228,6 @@
     <properties>
 	        <checkstyle.skip>true</checkstyle.skip>
         <java.version>1.8</java.version>
-        <jersey.config.test.container.port>8080</jersey.config.test.container.port>
+        <jersey.config.test.container.port>5050</jersey.config.test.container.port>
     </properties>
 </project>
