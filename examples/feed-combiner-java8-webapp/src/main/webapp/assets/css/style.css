@@ -108,6 +108,12 @@ border-width: 0 0 0px;
     letter-spacing:1px;
 }
 
+.navbar-brand2 {
+    font-size:50px;
+    font-weight:normal;
+    letter-spacing:1px;
+}
+
   /* =============================================================
    HOME SECTION STYLES -IN HOME / INDEX.HTML 
  ============================================================ */
@@ -171,7 +177,7 @@ color:#fff;
 #services-sec2 {
     background-color:#202020;
     color:#fff;
-	height: 300px;
+	height: 350px;
 }
 
    /* =============================================================
