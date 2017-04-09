@@ -26,7 +26,7 @@ COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL)Version 1.1
 
      C. Any new file that is contributed or otherwise made available under the terms of this License.
 
-     1.10. "Original Software" means the Source Code and Executable form of computer software code that is originally released under this License.
+     1.10. "Original Software" means the Source Codes and Executable form of computer software code that is originally released under this License.
 
      1.11. "Patent Claims" means any patent claim(s), now owned or hereafter acquired, including without limitation, method, process, and apparatus claims, in any patent Licensable by grantor.
 
