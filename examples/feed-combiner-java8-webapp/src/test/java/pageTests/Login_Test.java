@@ -118,7 +118,7 @@ public class Login_Test {
 	public void beforeMethod() {
 		File file = new File("C:/Driver/IEDriverServer.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		driver = new ChromeDriver();
+		driver = new InternetExplorerDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("file:///D:/Users/400219041/gdevops/examples/feed-combiner-java8-webapp/src/main/webapp/index_1.html");
