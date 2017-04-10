@@ -22,7 +22,7 @@ COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL)Version 1.1
 
      A. Any file that results from an addition to, deletion from or modification of the contents of a file containing Original Software or previous Modifications;
 
-     B. Any new file that contains any part of the Original Software or previous Modification; or
+     B. Any new file that contains any part of the Oriiginal Software or previous Modification; or
 
      C. Any new file that is contributed or otherwise made available under the terms of this License.
 
