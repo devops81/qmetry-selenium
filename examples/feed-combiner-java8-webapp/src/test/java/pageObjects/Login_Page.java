@@ -6,26 +6,24 @@ import org.openqa.selenium.WebElement;
 
 public class Login_Page {
 	private static WebElement element = null;
-	public static String appUrl = "C:/JenkinSlave/workspace/Banking Scorecard Build/examples/feed-combiner-java8-webapp/src/test/resources/Loginform.html";
-	public static String driverUrl = "C:/IEDriverServer.exe";
 
 	public static WebElement txtbx_UserName(WebDriver driver) {
 
-		element = driver.findElement(By.id("userid"));
+		element = driver.findElement(By.id("username"));
 
 		return element;
 	}
 
 	public static WebElement txtbx_Password(WebDriver driver) {
 
-		element = driver.findElement(By.id("pswrd"));
+		element = driver.findElement(By.id("password"));
 
 		return element;
 	}
 
 	public static WebElement btn_LogIn(WebDriver driver) {
 
-		element = driver.findElement(By.xpath("/html/body/form/input[3]"));
+		element = driver.findElement(By.id("submit"));
 
 		return element;
 	}
@@ -36,5 +34,12 @@ public class Login_Page {
 
 		return element;
 	}
+	
+	public static WebElement btn_Back(WebDriver driver) {
 
+		element = driver.findElement(By.xpath("/html/body/center/a"));
+
+		return element;
+	}
+	
 }
