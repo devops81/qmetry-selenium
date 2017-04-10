@@ -1,24 +1,31 @@
-package pageTests;
+package QAAutomationImpl.unittest;
 
+import pageObjects.Login_Page;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import pageObjects.Login_Page;
 
 public class Login_Test {
 	private static WebDriver driver = null;
 	public String[] invalidChars = { "#", "!", "$", "@", "%", "^", "&" };
 
-	//@DataProvider(name = "Authentication")
+	@DataProvider(name = "Authentication")
 
 	public static Object[][] credentials() {
 
@@ -27,12 +34,30 @@ public class Login_Test {
 
 	}
 
+	 @Test
+	public void Validate_PageIsLoadedOrNOt() {
+		assertEquals(driver.getTitle(), "IntelliGen Framework Genpact");
+
+	}
+
+	//@Test
+	public void Validate_SuccessfulLogin() throws InterruptedException {
+		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
+		Login_Page.txtbx_Password(driver).sendKeys("sa");
+		Login_Page.btn_LogIn(driver).click();
+		Alert a = driver.switchTo().alert();
+		a.accept();
+		Thread.sleep(5000);
+		assertEquals(driver.getTitle(), "Welcome Page");
+		Login_Page.btn_Back(driver).click();
+	}
+
 	//@Test
 	public void IsUserNameFIeldIsPresent() {
 		assertTrue(Login_Page.txtbx_UserName(driver).isDisplayed());
 	}
 
-	//@Test
+	// @Test
 	public void IsPasswordFIeldIsPresent() {
 		assertTrue(Login_Page.txtbx_Password(driver).isDisplayed());
 	}
@@ -43,16 +68,7 @@ public class Login_Test {
 	}
 
 	//@Test
-	public void LoginwithValidCredential() throws InterruptedException {
-		Login_Page.txtbx_UserName(driver).sendKeys("400218542");
-		Login_Page.txtbx_Password(driver).sendKeys("sa");
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(5000);
-		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}
-
-	//@Test
-	public void LoginwithInValidCredential() throws InterruptedException {
+	public void Validate_LoginwithValidCredential() throws InterruptedException {
 		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
 		Login_Page.txtbx_Password(driver).sendKeys("sa");
 		Login_Page.btn_LogIn(driver).click();
@@ -61,24 +77,33 @@ public class Login_Test {
 	}
 
 	//@Test
-	public void LoginwithValidUserInvalidPasword() {
-		Login_Page.txtbx_UserName(driver).sendKeys("400218542");
+	public void Validate_LoginwithInValidCredential() throws InterruptedException {
+		Login_Page.txtbx_UserName(driver).sendKeys("maneeshs");
+		Login_Page.txtbx_Password(driver).sendKeys("sa");
+		Login_Page.btn_LogIn(driver).click();
+		Thread.sleep(5000);
+		Alert alert = driver.switchTo().alert();
+		String alertMsg = alert.getText();
+		String expectedMsg="Invalid User or Password and You have left";
+		alert.accept();
+		assertTrue(alertMsg.contains(expectedMsg));
+	}
+
+	// @Test
+	public void Validate_LoginwithValidUserInvalidPasword() {
+		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
 		Login_Page.txtbx_Password(driver).sendKeys("ha");
 		Login_Page.btn_LogIn(driver).click();
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	//@Test
-	/*public void LoginwithEmptyUserNameAndPassword() {
+	// @Test
+	public void Validate_LoginwithEmptyUserNameAndPassword() throws InterruptedException {
 		Login_Page.txtbx_UserName(driver).sendKeys("");
-		Login_Page.txtbx_Password(driver).sendKeys("");
+		Login_Page.txtbx_Password(driver).sendKeys("sa");
 		Login_Page.btn_LogIn(driver).click();
+		Thread.sleep(5000);
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}*/
-	
-	@Test
-	public void LoginwithEmptyUserNameAndPassword() {
-		System.out.println("Selenium Test...");
 	}
 
 	// @Test(dataProvider = "Authentication")
@@ -89,18 +114,17 @@ public class Login_Test {
 		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
 	}
 
-	//@BeforeMethod
+	@BeforeMethod
 	public void beforeMethod() {
-		File file = new File(Login_Page.driverUrl);
-		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
-		driver = new InternetExplorerDriver();
+		File file = new File("D:/Users/400219041/Demo/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get(Login_Page.appUrl);
+		driver.get("file:///D:/Users/400219041/gdevops/examples/feed-combiner-java8-webapp/src/main/webapp/index_1.html");
 	}
-	
 
-	//@AfterMethod
+	@AfterMethod
 	public void afterMethod() {
 		driver.quit();
 	}
