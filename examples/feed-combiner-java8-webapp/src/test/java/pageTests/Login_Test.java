@@ -116,8 +116,8 @@ public class Login_Test {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		File file = new File("C:/Driver/chromedriver.exe");
-		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
+		File file = new File("C:/Driver/IEDriverServer.exe");
+		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
