@@ -146,7 +146,7 @@
   <artifactId>maven-clover2-plugin</artifactId>
 			
   <configuration>
-     <licenseLocation>C:/JenkinSlave/workspace/Banking Scorecard Build_Dev/examples/feed-combiner-java8-webapp/clover.license</licenseLocation>
+     <licenseLocation>C:/CustomWork/examples/feed-combiner-java8-webapp/clover.license</licenseLocation>
   </configuration>
   <executions>
     <execution>
