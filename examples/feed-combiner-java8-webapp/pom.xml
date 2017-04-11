@@ -144,7 +144,7 @@
 		<plugin>
   <groupId>com.atlassian.maven.plugins</groupId>
   <artifactId>maven-clover2-plugin</artifactId>
-	<version>4.1</version>		
+			
   <configuration>
      <licenseLocation>C:/JenkinSlave/workspace/Banking Scorecard Build_Dev/examples/feed-combiner-java8-webapp/clover.license</licenseLocation>
   </configuration>
