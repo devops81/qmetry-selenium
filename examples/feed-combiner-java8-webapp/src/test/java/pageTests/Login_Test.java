@@ -72,7 +72,7 @@ public class Login_Test {
 		driver = new InternetExplorerDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.get("file:///C:/CustomWork/examples/feed-combiner-java8-webapp/src/main/webapp/index.html");
+		driver.get("file:///C:/JenkinSlave/workspace/Banking Scorecard Build_Dev/examples/feed-combiner-java8-webapp/src/main/webapp/index.html");
 	}
 
 	@AfterMethod
