@@ -7,38 +7,63 @@ import org.openqa.selenium.WebElement;
 public class Login_Page {
 	private static WebElement element = null;
 
-	public static WebElement txtbx_UserName(WebDriver driver) {
+	public static WebElement hlink_ContactUs(WebDriver driver) {
 
-		element = driver.findElement(By.id("username"));
-
-		return element;
-	}
-
-	public static WebElement txtbx_Password(WebDriver driver) {
-
-		element = driver.findElement(By.id("password"));
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[4]/a"));
 
 		return element;
 	}
 
-	public static WebElement btn_LogIn(WebDriver driver) {
+	public static WebElement hlink_Home(WebDriver driver) {
 
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[1]/a"));
+
+		return element;
+	}
+
+	public static WebElement hlink_NewsletterSuscription(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[5]/a"));
+
+		return element;
+	}
+
+	public static WebElement hlink_Services(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[2]/a"));
+
+		return element;
+	}
+
+	public static WebElement hlink_GenpactLogo(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/a/img"));
+
+		return element;
+	}
+
+	public static WebElement hlink_About(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/ul/li[3]/a"));
+
+		return element;
+	}
+
+	public static WebElement about_Framework(WebDriver driver) {
+
+		element = driver.findElement(By.xpath("//*[@id='about']/div/div/div[1]/h3"));
+
+		return element;
+
+	}
+
+	public static WebElement des_ContactUs(WebDriver driver) {
+		element = driver.findElement(By.xpath("//*[@id='contact']/div/div/div[2]/address/h3"));
+		return element;
+	}
+
+	public static WebElement btn_SighUp(WebDriver driver) {
 		element = driver.findElement(By.id("submit"));
-
-		return element;
-	}
-	
-	public static WebElement txtlbl_InvalidUser(WebDriver driver) {
-
-		element = driver.findElement(By.xpath("/html/body/div[1]/div/div[2]/div/div[2]/table/tbody/tr[3]/td/span"));
-
-		return element;
-	}
-	
-	public static WebElement btn_Back(WebDriver driver) {
-
-		element = driver.findElement(By.xpath("/html/body/center/a"));
-
 		return element;
 	}
 	

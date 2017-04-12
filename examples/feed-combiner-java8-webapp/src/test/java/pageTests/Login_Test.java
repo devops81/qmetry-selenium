@@ -34,86 +34,37 @@ public class Login_Test {
 
 	}
 
-	 @Test
+	@Test
 	public void Validate_PageIsLoadedOrNOt() {
 		assertEquals(driver.getTitle(), "IntelliGen Framework Genpact");
 
 	}
 
-	//@Test
-	public void Validate_SuccessfulLogin() throws InterruptedException {
-		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
-		Login_Page.txtbx_Password(driver).sendKeys("sa");
-		Login_Page.btn_LogIn(driver).click();
-		Alert a = driver.switchTo().alert();
-		a.accept();
-		Thread.sleep(5000);
-		assertEquals(driver.getTitle(), "Welcome Page");
-		Login_Page.btn_Back(driver).click();
+	@Test
+	public void Validate_IfLogoIsDisplayedorNot() throws InterruptedException {
+		assertTrue(Login_Page.hlink_GenpactLogo(driver).isDisplayed());
 	}
 
-	//@Test
-	public void IsUserNameFIeldIsPresent() {
-		assertTrue(Login_Page.txtbx_UserName(driver).isDisplayed());
+	@Test
+	public void Validate_IfAboutLinkIsEnable() throws InterruptedException {
+		Login_Page.hlink_About(driver).click();
+		Thread.sleep(2000);
+		assertTrue(Login_Page.about_Framework(driver).isDisplayed());
 	}
 
-	// @Test
-	public void IsPasswordFIeldIsPresent() {
-		assertTrue(Login_Page.txtbx_Password(driver).isDisplayed());
+	@Test
+	public void Validate_IfContactusEnabled() throws InterruptedException {
+		Login_Page.hlink_ContactUs(driver).click();
+		Thread.sleep(2000);
+		assertTrue(Login_Page.des_ContactUs(driver).isDisplayed());
 	}
 
-	//@Test
-	public void IsLoginButtonIsPresent() {
-		assertTrue(Login_Page.btn_LogIn(driver).isDisplayed());
+	@Test
+	public void Validate_IfNewsletterLinkisEnabled() throws InterruptedException {
+		Login_Page.hlink_NewsletterSuscription(driver).click();
+		Thread.sleep(2000);
+		assertTrue(Login_Page.btn_SighUp(driver).isDisplayed());
 	}
-
-	//@Test
-	public void Validate_LoginwithValidCredential() throws InterruptedException {
-		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
-		Login_Page.txtbx_Password(driver).sendKeys("sa");
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(5000);
-		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}
-
-	//@Test
-	public void Validate_LoginwithInValidCredential() throws InterruptedException {
-		Login_Page.txtbx_UserName(driver).sendKeys("maneeshs");
-		Login_Page.txtbx_Password(driver).sendKeys("sa");
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(5000);
-		Alert alert = driver.switchTo().alert();
-		String alertMsg = alert.getText();
-		String expectedMsg="Invalid User or Password and You have left";
-		alert.accept();
-		assertTrue(alertMsg.contains(expectedMsg));
-	}
-
-	// @Test
-	public void Validate_LoginwithValidUserInvalidPasword() {
-		Login_Page.txtbx_UserName(driver).sendKeys("400219041");
-		Login_Page.txtbx_Password(driver).sendKeys("ha");
-		Login_Page.btn_LogIn(driver).click();
-		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}
-
-	// @Test
-	public void Validate_LoginwithEmptyUserNameAndPassword() throws InterruptedException {
-		Login_Page.txtbx_UserName(driver).sendKeys("");
-		Login_Page.txtbx_Password(driver).sendKeys("sa");
-		Login_Page.btn_LogIn(driver).click();
-		Thread.sleep(5000);
-		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}
-
-	// @Test(dataProvider = "Authentication")
-	public void FirstTest(String sUsername, String sPassword) {
-		Login_Page.txtbx_UserName(driver).sendKeys(sUsername);
-		Login_Page.txtbx_Password(driver).sendKeys(sPassword);
-		Login_Page.btn_LogIn(driver).click();
-		assertTrue(Login_Page.txtlbl_InvalidUser(driver).isDisplayed());
-	}
-
 	@BeforeMethod
 	public void beforeMethod() {
 		File file = new File("C:/Driver/IEDriverServer.exe");
