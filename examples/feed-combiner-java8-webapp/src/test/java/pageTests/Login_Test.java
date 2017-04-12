@@ -67,11 +67,9 @@ public class Login_Test {
 	}
 	@BeforeMethod
 	public void beforeMethod() {
-
 		File file = new File("C:/Driver/IEDriverServer.exe");
 		System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
 		driver = new InternetExplorerDriver();
-		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("file:///C:/CustomWork/examples/feed-combiner-java8-webapp/src/main/webapp/index.html");
