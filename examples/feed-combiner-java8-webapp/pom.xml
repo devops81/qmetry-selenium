@@ -143,11 +143,11 @@
         <plugins>
 		<plugin>
   <groupId>com.atlassian.maven.plugins</groupId>
-  <artifactId>maven-clover2-plugin</artifactId>
-			
-  <configuration>
+  <artifactId>clover-maven-plugin</artifactId>
+    <version>4.1.1</version>			
+ <!-- <configuration>
      <licenseLocation>C:/clover.license</licenseLocation>
-  </configuration>
+  </configuration> -->
   <executions>
     <execution>
       <phase>pre-site</phase>
