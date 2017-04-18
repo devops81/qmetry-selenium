@@ -142,7 +142,7 @@
     <build>
         <plugins>
 		<plugin>
-			<groupId>org.codehaus.mojo</groupId>
+  <groupId>org.codehaus.mojo</groupId>
   <artifactId>buildnumber-maven-plugin</artifactId>
   <version>1.1</version>
   <executions>
@@ -165,6 +165,8 @@
       <item>timestamp</item>
     </items>
   </configuration>
+</plugin>
+		<plugin>
   <groupId>com.atlassian.maven.plugins</groupId>
   <artifactId>clover-maven-plugin</artifactId>
     <version>4.1.2</version>			
