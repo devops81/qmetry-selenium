@@ -145,9 +145,7 @@
   <groupId>com.atlassian.maven.plugins</groupId>
   <artifactId>clover-maven-plugin</artifactId>
     <version>4.1.2</version>			
- <!-- <configuration>
-     <licenseLocation>C:/clover.license</licenseLocation>
-  </configuration> -->
+
   <executions>
     <execution>
       <phase>pre-site</phase>
