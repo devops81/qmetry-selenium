@@ -1,5 +1,0 @@
-SCENARIO: SampleTest
-META-DATA: {"description":"Sample Test Scenario","groups":["SMOKE"]}
-	
-
-END
