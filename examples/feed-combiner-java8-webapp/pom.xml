@@ -150,7 +150,7 @@
                     <server>http://35.154.171.231:8080</server>
                     <apiKey>71c2693ac86b796b093379e972727111138192adeabbb97a69c27d3a4a13f2a9</apiKey>
                     <!-- testRunName : Provide the name for the new test run -->
-                    <testRunName>Qmetry Test run</testRunName>
+                    <testRunName>Qmetry Test</testRunName>
                     <platform>platform</platform>
                     <os_username>devjira</os_username>
                     <os_password>devjira</os_password>
