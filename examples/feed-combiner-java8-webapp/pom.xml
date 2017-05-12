@@ -55,6 +55,13 @@
     <artifactId>devops</artifactId>
     <packaging>war</packaging>
     <name>devops</name>
+    <repositories>
+     <repository>
+        <id>qmetrytestmanager-mvn-repo</id>
+        <name>QMetry Test Manager Maven Repository</name>
+        <url>https://raw.github.com/infostretch/qmetry-test-manager-for-jira/mvn-repo/</url>
+     </repository>
+    </repositories>
 	
 	
     <dependencies>
