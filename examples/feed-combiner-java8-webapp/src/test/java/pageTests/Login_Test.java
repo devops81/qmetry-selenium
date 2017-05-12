@@ -79,9 +79,6 @@ public class Login_Test {
 	public void afterMethod() {
 		driver.quit();
 		
-	@CucumberOptions
-	plugin = "com.infostretch.qmetrytestmanager.result.TestExecution";
-	
 	}
         
 }
