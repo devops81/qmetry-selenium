@@ -81,6 +81,7 @@ public class Login_Test {
 	/*	
 	@CucumberOptions
 	plugin = "com.infostretch.qmetrytestmanager.result.TestExecution"
+	*/
 	}
-        */
+        
 }
