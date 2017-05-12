@@ -80,7 +80,7 @@ public class Login_Test {
 		driver.quit();
 		
 	@CucumberOptions
-	plugin = "com.infostretch.qmetrytestmanager.result.TestExecution"
+	plugin = "com.infostretch.qmetrytestmanager.result.TestExecution";
 	
 	}
         
